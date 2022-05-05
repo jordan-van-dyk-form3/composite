@@ -8,6 +8,8 @@ inputs:
 outputs:
   random-number:
     value: ${{ steps.something.outputs.random-number }}
+  time:
+    value: ${{ steps.something.outputs.time }}
 runs:
   using: "composite"
   steps:

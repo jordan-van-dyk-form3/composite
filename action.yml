@@ -1,0 +1,21 @@
+name: "Composite inception"
+description: "we must go deeper"
+inputs:
+  something-neat:
+    default: "top"
+  who:
+    default: "World"
+outputs:
+  random-number:
+    value: ${{ steps.something.outputs.random-number }}
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.who }} from composite.
+      shell: bash
+    - id: something 
+      uses: jordan-van-dyk-form3/github-action-playground@v6
+      with:
+        who-to-greet: ${{ inputs.who }}
+    - run: echo This is a neat thing a ${{ inputs.something-neat }}
+      shell: bash

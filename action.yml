@@ -6,7 +6,7 @@ inputs:
   who:
     default: "World"
   shhh:
-    defaul: "pass fail"
+    default: "pass fail"
 outputs:
   random-number:
     value: ${{ steps.something.outputs.random-number }}

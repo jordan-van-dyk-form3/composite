@@ -15,6 +15,8 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: checkout
+      uses: actions/checkout@v3
     - run: echo Hello ${{ inputs.who }} from composite.
       shell: bash
     - id: something 

@@ -25,3 +25,9 @@ runs:
       shell: bash
     - run: echo this is super secret ${{ inputs.shhh }}
       shell: bash
+    - id: dockertest
+      uses: jordan-van-dyk-form3/github-action-playground/dockeraction@main
+      with:
+        who-to-greet: "a docker bot"
+    - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
+      shell: bash

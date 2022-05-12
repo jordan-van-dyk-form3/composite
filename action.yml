@@ -17,7 +17,8 @@ runs:
   steps:
     # - name: checkout
     #   uses: actions/checkout@v3
-    - run: echo Hello ${{ inputs.who }} from composite.
+    # - run: echo Hello ${{ inputs.who }} from composite.
+    - run: ./goodbye.sh
       # shell: bash
       shell: sh
     - id: something 

@@ -1,5 +1,8 @@
 name: "Composite inception"
 description: "we must go deeper"
+
+env:
+  test: "what is the test that is actually being used"
 inputs:
   something-neat:
     default: "top"

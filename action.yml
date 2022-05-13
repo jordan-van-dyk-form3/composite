@@ -36,3 +36,4 @@ runs:
     - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
       shell: sh
     - run: echo ${{ env.test }}
+      shell: sh

@@ -1,8 +1,7 @@
 name: "Composite inception"
 description: "we must go deeper"
 
-env:
-  test: "what is the test that is actually being used"
+
 inputs:
   something-neat:
     default: "top"
@@ -38,5 +37,7 @@ runs:
         who-to-greet: "a docker bot"
     - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
       shell: sh
-    - run: echo ${{ env.test }}
+    - env:
+        test: "composite test"
+      run: echo ${{ env.test }}
       shell: sh

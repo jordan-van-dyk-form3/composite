@@ -37,7 +37,7 @@ runs:
         who-to-greet: "a docker bot"
     - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
       shell: sh
-    - env:
-        test: "composite test"
-      run: echo ${{ env.test }}
+    # - env:
+    #     test: "composite test"
+    - run: echo ${{ env.test }}
       shell: sh

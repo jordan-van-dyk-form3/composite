@@ -17,27 +17,27 @@ outputs:
 runs:
   using: "composite"
   steps:
-    # - name: checkout
-    #   uses: actions/checkout@v3
-    # - run: echo Hello ${{ inputs.who }} from composite.
-    - run: ./goodbye.sh
-      # shell: bash
-      shell: sh
-    - id: something 
-      uses: jordan-van-dyk-form3/github-action-playground@main
-      with:
-        who-to-greet: ${{ inputs.who }}
+    # # - name: checkout
+    # #   uses: actions/checkout@v3
+    # # - run: echo Hello ${{ inputs.who }} from composite.
+    # - run: ./goodbye.sh
+    #   # shell: bash
+    #   shell: sh
+    # - id: something 
+    #   uses: jordan-van-dyk-form3/github-action-playground@main
+    #   with:
+    #     who-to-greet: ${{ inputs.who }}
     - run: echo This is a neat thing a ${{ inputs.something-neat }}
       shell: sh
-    - run: echo this is super secret ${{ inputs.shhh }}
-      shell: sh
-    - id: dockertest
-      uses: jordan-van-dyk-form3/github-action-playground/dockeraction@main
-      with:
-        who-to-greet: "a docker bot"
-    - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
-      shell: sh
-    # - env:
-    #     test: "composite test"
-    - run: echo ${{ env.test }}
-      shell: sh
+    # - run: echo this is super secret ${{ inputs.shhh }}
+    #   shell: sh
+    # - id: dockertest
+    #   uses: jordan-van-dyk-form3/github-action-playground/dockeraction@main
+    #   with:
+    #     who-to-greet: "a docker bot"
+    # - run: echo "docker time was ${{ steps.dockertest.outputs.time }}"
+    #   shell: sh
+    # # - env:
+    # #     test: "composite test"
+    # - run: echo ${{ env.test }}
+    #   shell: sh
